@@ -3,7 +3,7 @@ const routes = {
 
   //API ROUTES
   server: {
-    base: "https://ceriga-devy-backend.vercel.app",
+    base: "https://studio-ceriga-backend.vercel.app",
     //base: "http://localhost:4000",
     auth: "/auth",
     refresh: "/auth/refresh",
