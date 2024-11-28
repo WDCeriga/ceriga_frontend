@@ -1,0 +1,13 @@
+.color {
+  list-style: none;
+  &_button {
+    cursor: pointer;
+    width: 24px;
+    height: 24px; 
+    border-radius: 50%;
+    border: none;
+    &__active {
+      border: 3px solid #C80F0F;
+    }
+  }
+}

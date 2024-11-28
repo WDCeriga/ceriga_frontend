@@ -1,0 +1,13 @@
+.block{ 
+  list-style: none;
+  padding: 24px 0;
+  width: 300px;
+
+  & > div {
+    width: 100%;
+    & > h2 { 
+      font-size: 40px;
+    }
+  }
+  
+}

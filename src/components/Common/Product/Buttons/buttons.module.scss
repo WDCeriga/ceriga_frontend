@@ -1,0 +1,14 @@
+.group {
+  position: absolute;
+  bottom: 27px;
+  left: 16px;
+  width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__default{ 
+    left: 22px;
+    bottom: 24px;
+    width: calc(100% - 44px);
+  }
+}

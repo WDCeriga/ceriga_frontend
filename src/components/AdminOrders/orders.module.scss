@@ -1,0 +1,29 @@
+.container {
+  margin-top: 28px;
+  padding: 8px;
+
+  @media (min-width: 768px) {
+    padding: 32px;
+    margin-top: 56px;
+  }
+
+  .content {
+    margin-top: 35px;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px 0 #00000012;
+    background: #fff;
+
+    @media (min-width: 768px) {
+      margin-top: 69px;
+      padding: 16px;
+    }
+  }
+  .pagination {
+    margin-top: 26px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

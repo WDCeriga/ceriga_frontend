@@ -1,0 +1,1 @@
+export type uploadFileType = "uploadDesign" | "uploadLabel" | "uploadNeck" | "uploadPackageDesign"

@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  background: #efefef;
+  &_row {
+    height: 52px;
+    &_item {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      color: #000;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      &_checkbox {
+        position: relative;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #c80f0f;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 4px;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &:checked {
+          background: #c80f0f;
+          transform: scale(1.1);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

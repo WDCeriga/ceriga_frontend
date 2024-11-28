@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  margin: 78px auto 0 auto;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 1284px;
+  padding-inline: 16px;
+
+  @media (min-width: 768px) {
+    padding-inline: 32px;
+  }
+
+  
+  &_description {
+    margin-top: 24px;
+    width: 255px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1e1e1e;
+  }
+}

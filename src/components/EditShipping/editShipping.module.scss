@@ -1,0 +1,16 @@
+.container{ 
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 32px;
+  height: calc(100vh - 88px);
+  &_title{ 
+    position: absolute;
+    left: 32px;
+  }
+  &_button {
+    position: absolute;
+    right: 32px;
+    bottom: 104px;
+  }
+}

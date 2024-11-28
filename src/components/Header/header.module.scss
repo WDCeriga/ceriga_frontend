@@ -1,0 +1,25 @@
+.container {
+  position: fixed;
+  top: 0; 
+  left: 92px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 32px;
+  width: calc(100% - 156px);
+  height: 40px;
+  background: #303030;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  &__logo {
+    transition: opacity 0.3s ease;
+  }
+  &__open {
+    justify-content: flex-end;
+    left: 248px;
+    width: calc(100% - 312px); 
+    & .container__logo {
+      opacity: 0; 
+    }
+  }
+}

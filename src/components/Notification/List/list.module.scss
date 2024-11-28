@@ -1,0 +1,8 @@
+.list{ 
+  overflow-y: scroll;
+  max-height: 70%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}

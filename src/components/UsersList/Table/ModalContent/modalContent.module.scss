@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.17);
+  background: #fff;
+  border-radius: 8px;
+  &_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    &_item {
+      list-style: none;
+      &_button {
+        cursor: pointer;
+        width: 100%;
+        padding: 4px 0px;
+        border: 2px solid #f66;
+        border-radius: 100px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #efefef;
+        box-shadow: 0 4px 8px 0 rgba(193, 188, 188, 0.1);
+        background: #de5252;
+      }
+    }
+  }
+}

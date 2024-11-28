@@ -1,0 +1,282 @@
+.short {
+  position: relative;
+  width: 300px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.letter_wrap {
+  position: absolute;
+  background-color: #d9d8d8;
+  border: 1px solid #606060;
+  border-radius: 100%;
+  font-size: 8px;
+  font-weight: 400;
+  padding: 2px 4px;
+}
+
+.arrowhead {
+  position: absolute;
+  display: block;
+  padding: 2px;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.active_line {
+  background-color: red;
+  width: 2px;
+  height: 2px;
+}
+.active_line {
+  background-color: red;
+  width: 2px;
+  height: 2px;
+}
+
+.active_letter {
+  color: red;
+}
+.active_arrowhead_border {
+  border-left: 2px solid red;
+  border-top: 2px solid red;
+}
+
+
+.arrow_a {
+  transform: rotate(180deg);
+  top: 19%;
+  left: 40%;
+  height: 73%;
+
+  &_letter {
+    transform: rotate(180deg);
+    top: 50%;
+    right: -7px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_b {
+  top: 48%;
+  left: 30%;
+  width: 47%;
+
+  &_letter {
+    top: -6px;
+    right: 18%;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_c {
+  top: 88%;
+  left: 31%;
+  width: 47%;
+
+  &_letter {
+    top: -7px;
+    right: 40%;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+.arrow_d {
+  transform: rotate(215deg);
+  top: 22%;
+  left: 16%;
+  height: 20%;
+
+  &_letter {
+    transform: rotate(145deg);
+    top: 50%;
+    right: -8px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_e {
+  transform: rotate(276deg);
+  top: 36%;
+  left: 69%;
+  width: 25%;
+
+  &_letter {
+    transform: rotate(82deg);
+    top: -6px;
+    right: 50%;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+.arrow_f {
+  transform: rotate(38deg);
+  top: 43%;
+  left: 13%;
+  width: 17%;
+
+  &_letter {
+    transform: rotate(320deg);
+    top: -6px;
+    right: 50%;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_g {
+  transform: rotate(325deg);
+  top: 23%;
+  left: 59%;
+  height: 6px;
+
+  &_letter {
+    transform: rotate(35deg);
+    top: 120%;
+    right: -9px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_h {
+  transform: rotate(0deg);
+  z-index: 3;
+  outline: transparent;
+  box-sizing: border-box;
+  top: 13%;
+  left: 43%;
+  height: 3%;
+  width: 22%;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-bottom: none;
+
+  &_letter {
+    position: absolute;
+    z-index: 2;
+    top: -70%;
+    left: 10%;
+    padding: 2px 4px;
+  }
+
+  &_head_right {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -3px;
+  }
+  &_head_left {
+    transform: rotate(225deg);
+    bottom: 0px;
+    left: -3px;
+  }
+  &_head_left.active_head_left {
+    left: -4px;
+  }
+  &_head_right.active_head_right {
+    right: -4px;
+  }
+  &.active_line_border::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: 0; 
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    pointer-events: none; 
+  }
+}
+.arrow_i {
+  transform: rotate(0deg);
+  outline: transparent;
+  box-sizing: border-box;
+  top: 6%;
+  left: 26%;
+  height: 16%;
+  width: 56%;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-bottom: none;
+
+  &_letter {
+    position: absolute;
+    z-index: 2;
+    top: -15%;
+    left: 55%;
+    padding: 2px 5px;
+  }
+
+  &_head_right {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -3px;
+  }
+  &_head_left {
+    transform: rotate(225deg);
+    bottom: 0px;
+    left: -3px;
+  }
+  &_head_left.active_head_left {
+    left: -4px;
+  }
+  &_head_right.active_head_right {
+    right: -4px;
+  }
+  &.active_line_border::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: 0; 
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    pointer-events: none; 
+  }
+}

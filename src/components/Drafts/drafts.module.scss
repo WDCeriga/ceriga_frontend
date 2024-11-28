@@ -1,0 +1,22 @@
+.section {
+  position: relative;
+  padding: 81px 0 48px 0;
+  height: calc(100vh - 129px);
+  background: #f9faf9;
+  &_description {
+    margin-top: 24px;
+    width: 255px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1e1e1e;
+  }
+}
+.wrapper {
+  margin: 0 auto;
+  padding-inline: 16px;
+
+  @media (min-width: 768px) {
+    padding-inline: 32px;
+  }
+}

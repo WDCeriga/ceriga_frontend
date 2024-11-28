@@ -1,0 +1,23 @@
+.main {
+  width: 100%;
+  height: calc(100vh - 53px);
+  background: #efefef;
+  overflow: hidden;
+  &__bg{
+    background: url("/img/background/settings.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.wrapper{ 
+  padding: 0 32px;
+  margin: 0 auto;
+  width: calc(100% - 64px);
+  height: 100%;
+  &_center{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

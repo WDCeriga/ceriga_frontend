@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  padding: 8px 16px;
+  width: 176px;
+  border-radius: 8px;
+  border: 1px solid #efefef;
+  &_input {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 135%;
+    color: #303030;
+    border: none;
+    background: none;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 135%;
+      color: #303030;
+    }
+   
+    &:focus {
+      outline: none;
+    }
+  }
+  &_button {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}

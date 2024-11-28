@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  &_input {
+    padding: 5px 6px;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    color: #303030;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    &:focus{ 
+      outline: none;
+    }
+    &::placeholder {
+      color: #303030;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 115%;
+    }
+  }
+  &_button{ 
+    padding: 5px 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #303030;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFF;
+  }
+}

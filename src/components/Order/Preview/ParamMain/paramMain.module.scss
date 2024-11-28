@@ -1,0 +1,26 @@
+.item {
+  list-style: none;
+  display: flex;
+  column-gap: 32px;
+  &_title {
+    width: 107px;
+    color: #606060;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &_text {
+    color: #101010;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &_subparamets {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+}

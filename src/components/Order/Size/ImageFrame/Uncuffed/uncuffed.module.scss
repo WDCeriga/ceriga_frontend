@@ -1,0 +1,171 @@
+.pants_1 {
+  position: relative;
+  width: 300px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.letter_wrap {
+  position: absolute;
+  background-color: #D9D8D8;
+  border: 1px solid #606060;
+  border-radius: 100%;
+  font-size: 8px;
+  font-weight: 400;
+  padding: 2px 4px;
+}
+
+.arrowhead {
+  position: absolute;
+  display: block;
+  padding: 2px;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.active_line {
+  background-color: red;
+  width: 2px;
+  height: 2px;
+}
+
+.active_letter {
+  color: red;
+}
+.active_arrowhead_border {
+  border-left: 2px solid red;
+  border-top: 2px solid red;
+}
+
+.arrow_a {
+  transform: rotate(184deg);
+  top: 8%;
+  left: 26%;
+  height: 85%;
+
+  &_letter {
+    transform: rotate(175deg);
+    top: 50%;
+    right: -7px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+
+.arrow_b_c {
+  transform: rotate(270deg);
+  top: -7%;
+  left: 50%;
+  height: 27%;
+
+  &_letter_b {
+    transform: rotate(90deg);
+    top: 20%;
+    right: -10px;
+    padding: 2px 4px;
+  }
+  &_letter_c {
+    transform: rotate(90deg);
+    top: 60%;
+    right: -10px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_d {
+  transform: rotate(270deg);
+  top: 36%;
+  left: 61%;
+  height: 16%;
+
+  &_letter {
+    transform: rotate(90deg);
+    top: 40%;
+    right: -8px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_e {
+  transform: rotate(275deg);
+  top: 89%;
+  left: 34%;
+  height: 14%;
+
+  &_letter {
+    transform: rotate(85deg);
+    top: 10%;
+    left: -5px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_f {
+  transform: rotate(180deg);
+  top: 11%;
+  left: 48%;
+  height: 14%;
+
+  &_letter {
+    transform: rotate(180deg);
+    top: 30%;
+    left: -2px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+.arrow_g {
+  transform: rotate(0deg);
+  top: 11%;
+  left: 54%;
+  height: 14%;
+
+  &_letter {
+    transform: rotate(12deg);
+    top: 30%;
+    left: -2px;
+    padding: 2px 4px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}

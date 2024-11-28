@@ -1,0 +1,18 @@
+.container {
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  &_title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 167%;
+    color: #303030;
+  }
+  &_button {
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}

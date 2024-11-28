@@ -1,0 +1,10 @@
+.params{ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 8px;
+
+  @media (min-width: 800px) {
+    row-gap: 16px;
+  }
+}

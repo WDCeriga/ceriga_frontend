@@ -1,0 +1,209 @@
+.sleeveless {
+  position: relative;
+  width: 300px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: gray;
+  cursor: pointer;
+  
+}
+
+.letter_wrap {
+  position: absolute;
+  background-color: #D9D8D8;
+  border: 1px solid #606060;
+  border-radius: 100%;
+  font-size: 8px;
+  font-weight: 400;
+  padding: 2px 4px;
+}
+
+.arrowhead {
+  position: absolute;
+  display: block;
+  padding: 2px;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+}
+
+.active_line {
+  background-color: red;
+  width: 2px;
+  height: 2px;
+}
+
+.active_letter {
+  color: red;
+}
+.active_arrowhead_border {
+  border-left: 2px solid red;
+  border-top: 2px solid red;
+}
+
+.arrow_a {
+  top: 13%;
+  left: 34%;
+  height: 72%;
+
+  &_letter {
+    top: 60%;
+    right: -7px;
+  }
+
+  &_head {
+    transform: rotate(225deg);
+    bottom: 0px;
+    right: -2px;
+  }
+}
+
+.arrow_b {
+  top: 39%;
+  left: 18%;
+  width: 68%;
+
+
+  &_letter {
+    top: -10px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: -1px;
+  }
+}
+
+.arrow_c {
+  top: 68%;
+  left: 18%;
+  width: 68%;
+
+  &_letter {
+    top: -10px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_d {
+  top: 83%;
+  left: 18%;
+  width: 68%;
+
+  &_letter {
+    top: -10px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_e {
+  transform: rotate(78deg);
+  top: 25%;
+  left: 64%;
+  width: 38%;
+
+
+  &_letter {
+    transform: rotate(282deg);
+    top: -9px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0%;
+  }
+}
+
+.arrow_f {
+  top: 12%;
+  left: 38%;
+  width: 28%;
+
+  &_letter {
+    top: -10px;
+    right: 8px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_g {
+  transform: rotate(270deg);
+  top: 20%;
+  left: 40%;
+  width: 25%;
+
+  &_letter {
+    transform: rotate(89deg);
+    top: -10px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+
+.arrow_h {
+  transform: rotate(270deg);
+  top: 71px;
+  left: 40%;
+  width: 6%;
+
+  &_letter {
+    transform: rotate(270deg);
+    right: 10px;
+    top: -13px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}
+.arrow_i {
+  transform: rotate(343deg);
+  top: 12%;
+  left: 24%;
+  width: 13%;
+
+
+  &_letter {
+    transform: rotate(16deg);
+    top: -12px;
+    right:23px;
+    padding: 2px 5px;
+  }
+
+  &_head {
+    transform: rotate(135deg);
+    bottom: -2px;
+    right: 0;
+  }
+}

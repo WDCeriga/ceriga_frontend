@@ -1,0 +1,52 @@
+@import '../../../utils/mixins.scss';
+
+.params { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 16px;
+}
+
+.packageWrap {
+  margin-bottom: 50%;
+  
+  @include mobile{
+
+    max-width: 220px;
+    max-height: 220px;
+  }
+
+  @include tablet{
+
+    max-width: 320px;
+    max-height: 320px;
+  }
+  @include tablet-lg {
+
+    max-width: 420px;
+    max-height: 420px;
+  }
+  @include desktop {
+
+    max-width: 520px;
+    max-height: 520px;
+  }
+}
+.packageImg {
+  @include mobile{
+    max-width: 220px;
+    max-height: 220px;
+  }
+  @include tablet {
+    max-width: 320px;
+    max-height: 320px;
+  }
+  @include tablet-lg {
+    max-width: 420px;
+    max-height: 420px;
+  }
+  @include desktop {
+    max-width: 520px;
+    max-height: 520px;
+  }
+}

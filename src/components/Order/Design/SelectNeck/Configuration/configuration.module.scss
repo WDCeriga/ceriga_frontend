@@ -1,0 +1,16 @@
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 24px;
+  width: 268px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.07);
+  background: #fff;
+  border-radius: 16px;
+  &_btnClose{ 
+    cursor: pointer;
+    background: none;
+    border: none
+  }
+}

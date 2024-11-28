@@ -1,0 +1,174 @@
+.row {
+  border-bottom: 1px solid #ddd;
+  &_item {
+    position: relative;
+    padding: 2px;
+    text-align: left;
+    height: 130px;
+    text-transform: capitalize;
+    color: #000;
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: normal;
+
+    @media (min-width: 768px) {
+      height: 80px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    &_container {
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__price {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+    }
+
+    &__gray {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #606060;
+      display: inline-block;
+      word-break: break-all;
+
+      @media (max-width: 768px) {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        font-size: 10px;
+        white-space: normal;
+      }
+    }
+    &__green {
+      color: #3e8924;
+      max-width: 40px;
+      text-transform: none;
+      overflow-wrap: break-word;
+      white-space: normal;
+
+      @media (min-width: 500px) {
+        max-width: 60px;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 80px;
+      }
+      @media (min-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+    &_checkbox {
+      position: relative;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #c80f0f;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 4px;
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+      &:checked {
+        background: #c80f0f;
+        transform: scale(1.1);
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: 4px;
+          height: 8px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          opacity: 1;
+        }
+      }
+    }
+    &_container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      &_btns {
+        display: flex;
+        column-gap: 4px;
+        position: absolute;
+        left: 82px;
+      }
+    }
+    &_btnCopy {
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    &_btnOrderAgain {
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 100px;
+      border: 1px solid #c80f0f;
+      background: #fff;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+      color: #c80f0f;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    &_btnPay {
+      cursor: pointer;
+      padding: 4px 16px;
+      border-radius: 37px;
+      border: 1px solid #f66;
+      background: #c80f0f;
+      box-shadow: 0px 4px 10px 0px rgba(172, 67, 67, 0.23);
+      color: #efefef;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      border: none;
+      background: none;
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.invoice_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

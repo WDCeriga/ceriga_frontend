@@ -1,0 +1,56 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInLabel 0.5s ease-out forwards;
+
+  &_text {
+    color: #303030;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0;
+    animation: fadeInText 0.3s ease-out forwards;
+  }
+
+  &_input {
+    transition-duration: 0.3s;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    transform: scale(0.9);
+    animation: scaleUpInput 0.5s ease-out forwards;
+    &:focus {
+    transition-duration: 0.5s;
+     outline: none;
+     box-shadow: 0 4px 8px 0 #3030304d;
+    }
+  }
+}
+
+@keyframes fadeInLabel {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUpInput {
+  to {
+    transform: scale(1);
+  }
+}

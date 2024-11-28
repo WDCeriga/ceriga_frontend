@@ -1,0 +1,17 @@
+.picker {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 232px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.07);
+  &_range{ 
+    height: 8px;
+    &::-webkit-slider-runnable-track{
+     background:  linear-gradient(90deg, rgba(226, 216, 191, 0) 0%, #e2d8bf 100%);;
+    }
+  }
+}

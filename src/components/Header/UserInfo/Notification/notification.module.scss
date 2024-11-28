@@ -1,0 +1,15 @@
+.button {
+  position: relative;
+  cursor: pointer;
+  border:none;
+  background: none;
+  &_count{ 
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    background: #C80F0F;
+    border-radius: 50%;
+  }
+}

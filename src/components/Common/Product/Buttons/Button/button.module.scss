@@ -1,0 +1,15 @@
+.btn {
+  cursor: pointer;
+  padding: 12px 32px;
+  border-radius: 100px;
+  border: 1px solid #FFF;
+  background: rgba(48, 48, 48, 0.5);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFF;
+  &__small{ 
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+}

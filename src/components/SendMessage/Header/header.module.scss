@@ -1,0 +1,18 @@
+.header {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #efefef;
+  &_title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    color: #000;
+  }
+  &_button{ 
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}

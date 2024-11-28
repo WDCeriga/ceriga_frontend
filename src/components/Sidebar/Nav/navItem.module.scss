@@ -1,0 +1,45 @@
+.item {
+  list-style: none;
+  display: flex;
+  padding: 6px 0;
+  border-radius: 8px;
+  transition: background 0.3s ease, padding 0.3s ease;
+
+  &_link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: justify-content 0.3s ease;
+    &_content {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      &_title {
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+    &__opened {
+      justify-content: flex-start;
+    }
+  }
+  &_sublistBtn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  &__opened {
+    padding: 8px 16px;
+  }
+
+  &__active {
+    background: #606060;
+    border: 1px solid #c80f0f;
+  }
+}

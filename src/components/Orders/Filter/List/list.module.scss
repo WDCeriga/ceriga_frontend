@@ -1,0 +1,9 @@
+.list{ 
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+
+  @media (max-width: 1305px) {
+    overflow-y: scroll;
+  }
+}

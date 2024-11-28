@@ -1,0 +1,27 @@
+.list{ 
+  padding-bottom: 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  border-bottom: 1px solid #efefef;
+  &::-webkit-scrollbar {
+    display: block !important;
+    width: 8px; 
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px; 
+    border: 2px solid #efefef;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 4px; 
+  }
+}

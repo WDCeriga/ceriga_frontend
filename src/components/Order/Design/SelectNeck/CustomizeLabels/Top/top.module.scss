@@ -1,0 +1,15 @@
+.top{ 
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  &_list{ 
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  &_buttonClose{ 
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+}

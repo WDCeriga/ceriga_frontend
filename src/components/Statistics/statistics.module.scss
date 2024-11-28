@@ -1,0 +1,20 @@
+.container {
+  margin: 56px auto 0 auto;
+  max-width: 1295px;
+  padding: 32px;
+}
+.list {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:32px;
+  align-items: center;
+  justify-content: space-between;
+  &_item{
+    list-style: none;
+  }
+
+  @media(max-width: 1284px) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,27 @@
+.container{ 
+  list-style: none;
+  &_block{ 
+    position: relative;
+    cursor: pointer;
+    border:none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    &__active{ 
+      border: 3px solid #C80F0F;
+      box-shadow: 0 0 5px rgba(200, 15, 15, 0.5);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 10px;
+        height: 5px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}

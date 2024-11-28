@@ -1,0 +1,46 @@
+
+.slider {
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: 944px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1364px) {
+    max-width: 1364px;
+  }
+}
+.wrap {
+  padding-inline: 10px;
+  position: relative;
+  :first-child {
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: #C80F0F;
+  border: none; 
+  border-radius: 50%;
+  border: 1px solid white;
+  z-index: 1;
+}
+
+.left {
+  left: 0; 
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
+.right {
+  right: 0; 
+  top: 50%;
+  transform: translateY(-50%); 
+}

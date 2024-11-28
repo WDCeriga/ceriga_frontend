@@ -1,0 +1,24 @@
+.list {
+  height:70vh;
+  overflow: hidden;
+  margin-inline: 5%;
+  list-style: none;
+  margin-top: 32px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  justify-content: center;
+  gap: 24px 24px;
+  max-height: 90vh;
+  overflow-y: scroll;
+
+  li:last-child {
+    justify-self: flex-start;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: auto; 
+    justify-content: center;
+  }
+}
+

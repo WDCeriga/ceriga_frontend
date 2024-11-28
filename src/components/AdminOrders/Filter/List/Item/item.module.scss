@@ -1,0 +1,16 @@
+.item {
+  list-style: none;
+  
+  &_button {
+    cursor: pointer;
+    padding-inline: 8px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #303030;
+    background: #fff;
+    white-space: nowrap;
+    &__active {
+      border: 1px solid #c80f0f;
+    }
+  }
+}

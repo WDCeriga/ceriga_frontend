@@ -1,0 +1,33 @@
+.container{ 
+  margin-top: 20px;
+  display: flex;
+
+  justify-self: center;
+  align-items: center;
+  column-gap: 20px;
+  &_input {
+    height: 32px;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 4px 8px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &_btn{
+   
+      cursor: pointer;
+      border: 1px solid #f66;
+      border-radius: 100px;
+      width: 128px;
+      height: 32px;
+      box-shadow: 0 4px 8px 0 rgba(252, 13, 28, 0.15);
+      background: #c80f0f;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      color: #fff;
+     
+  }
+}
+

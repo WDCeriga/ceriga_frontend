@@ -1,0 +1,31 @@
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__size {
+    left: 40%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+
+    &>div {
+      width: 350px;
+    }
+  }
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

@@ -1,0 +1,13 @@
+.list {
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  list-style: none;
+  margin-top: 32px;
+  display: flex;
+  column-gap: 25.5px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

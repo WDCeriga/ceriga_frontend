@@ -1,0 +1,23 @@
+.container {
+  padding: 48px 0 152px 0;
+  background: url("/img/background/bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: cover; 
+  background-attachment: fixed; 
+}
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1296px;
+  margin-bottom: 32px;
+
+  @media (max-width: 1440px) {
+    padding-inline: 32px;
+  }
+
+  @media (max-width: 768px) {
+    padding-inline: 16px;
+  }
+}

@@ -1,0 +1,115 @@
+.body {
+  &_row {
+    border-bottom: 1px solid #efefef;
+    max-height: 180px;
+
+    @media (min-width: 768px) {
+      max-height: 130px;
+    }
+    @media (min-width: 1132px) {
+      max-height: 100px;
+    }
+
+    &_user {
+      padding: 3px 0;
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      overflow-wrap: break-word;
+      &_img {
+        margin-left: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      &_group {
+        &_name {
+          color: #000;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+
+          @media (min-width: 768px) {
+            font-size: 12px;
+            line-height: 22px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+        &_company {
+          color: #606060;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+
+          @media (min-width: 768px) {
+            font-size: 12px;
+            line-height: 22px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    &_role {
+      position: relative;
+      width: 20%;
+    }
+    &_text {
+      position: relative;
+      padding-left: 16px;
+      color: #000;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+
+      @media (min-width: 768px) {
+        font-size: 12px;
+        line-height: 22px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+      &_gray{ 
+        text-align: center;
+        font-size: 8px;
+        font-weight: 400;
+        color: #606060;
+
+        @media (min-width: 768px) {
+          font-size: 10px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+    }
+    &_button {
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  }
+
+.email {
+  max-width: 50px;
+  overflow-wrap: break-word;
+
+  @media (min-width: 768px) {
+    max-width: 100px;
+  }
+
+  @media (min-width: 1132px) {
+    max-width: 200px;
+  }
+}

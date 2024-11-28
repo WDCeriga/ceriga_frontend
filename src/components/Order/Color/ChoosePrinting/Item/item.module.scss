@@ -1,0 +1,30 @@
+.item {
+  list-style: none;
+  // &:last-child {
+  //  width: 100%;
+  // }
+  &_button {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    padding: 16px;
+    width: 150px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.17);
+    background: none;
+    border: none;
+    &__active {
+      transition-duration: 0.4s;
+      outline: 1px solid #c80f0f;
+      box-shadow: 0px 4px 10px 0px hsla(0, 86%, 42%, 0.348);
+    }
+
+    &_img {
+      width: 100%;
+      height: 92px;
+    }
+  }
+}

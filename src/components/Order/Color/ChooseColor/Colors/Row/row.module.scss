@@ -1,0 +1,15 @@
+.row {
+  &_title {
+    color: #303030;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &_list{
+    margin-top: 16px;
+    display: flex;
+    gap: 16px 7.4px;
+    flex-wrap: wrap;
+  }
+}

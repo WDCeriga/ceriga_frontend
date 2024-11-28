@@ -1,0 +1,16 @@
+.header {
+  padding: 8px 0;
+  width: 100%;
+  background: #303030;
+}
+
+.wrapper {
+  padding: 0 32px;
+  width: 100%;
+  width: calc(100% - 64px);
+  //margin: 0 auto;
+  //max-width: 1296px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

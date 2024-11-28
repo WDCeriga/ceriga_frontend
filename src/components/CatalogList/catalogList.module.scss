@@ -1,0 +1,14 @@
+.container {
+  padding: 88px 0 69px 0;
+  &_list{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1284px;
+}

@@ -1,0 +1,50 @@
+.content {
+  position: relative;
+  margin-top: 16px;
+  padding: 16px;
+  width: 572px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.07);
+  &_switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+    &_button {
+      cursor: pointer;
+      padding: 4px 12px;
+      background: none;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.07);
+      border-radius: 10px;
+      border: 1px solid #303030;
+      background: none;
+      &_active {
+        color: #fff;
+        border: 1px solid #c80f0f;
+        background: #c80f0f;
+      }
+    }
+  }
+  &_btn {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+  }
+  &_list {
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+  }
+}

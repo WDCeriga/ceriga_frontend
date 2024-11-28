@@ -1,0 +1,47 @@
+.body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  &_row {
+    border-spacing: 4px;
+    &_text {
+      position: relative;
+      display: flex;
+      margin-right: 8px;
+      width: 121px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #000;
+      &__active {
+        &::before{
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0px;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to right, #C80F0F 0%, #FFFFFF 100%);
+        }
+      }
+    }
+    &_item {
+      &_input {
+        width: calc(100% - 4px);
+        padding: 4px;
+        margin-bottom: 8px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+    &_char {
+      display: flex;
+      margin-right: 8px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #c80f0f;
+    }
+  }
+}

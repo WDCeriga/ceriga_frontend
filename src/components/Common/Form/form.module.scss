@@ -1,0 +1,30 @@
+.form {
+  margin: 200px auto 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  width: 420px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  &_top{ 
+    display: flex;
+    justify-content: flex-end;
+    &_button { 
+      cursor: pointer;
+      background: none;
+      border:none;
+    }
+  }
+  &_inputs{ 
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &_buttons{ 
+    display: flex;
+    column-gap: 24px;
+    justify-content: space-between;
+  }
+}

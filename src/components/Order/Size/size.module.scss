@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: calc(100% - 134px);
+}
+
+.params {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}

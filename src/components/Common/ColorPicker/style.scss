@@ -1,0 +1,45 @@
+
+
+.react-colorful {
+  row-gap: 16px !important;
+  width: 100% !important;
+
+  &__saturation {
+    height: 152px !important;
+    border-radius: 4px !important;
+    border: none !important;
+  }
+
+  &__pointer {
+    width: 8px !important;
+    height: 8px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 4px 6px 0 rgba(31, 41, 55, 0.1),
+      0 2px 4px 0 rgba(31, 41, 55, 0.06) !important;
+  }
+
+  &__hue {
+    height: 8px !important;
+    border-radius: 100px !important;
+  }
+  &__last-control {
+    height: 8px !important;
+    border-radius: 100px !important;
+    background: linear-gradient(
+      90deg,
+      #f00 5.21% !important,
+      #ff8a00 16.48% !important,
+      #ffe600 27.74% !important,
+      #14ff00 39.35% !important,
+      #00a3ff 49.37% !important,
+      #0500ff 61.18% !important,
+      #ad00ff 72.26% !important,
+      #ff00c7 83.53% !important,
+      #f00 94.61% !important
+    ) !important;
+  }
+}
+
+.react-colorful__alpha, .react-colorful__alpha-pointer{
+  background-image: none !important;
+}

@@ -1,0 +1,27 @@
+.container {
+  padding: 88px 32px 0 32px;
+  height: calc(100vh - 88px);
+  background: #efefef;
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_button {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      cursor: pointer;
+      border: 1px solid #f66;
+      border-radius: 100px;
+      padding: 12px 32px;
+      box-shadow: 0 4px 8px 0 rgba(252, 13, 28, 0.15);
+      background: #c80f0f;
+      &_text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+      }
+    }
+  }
+}

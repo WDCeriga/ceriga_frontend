@@ -1,0 +1,33 @@
+.btn{
+  cursor: pointer;
+  margin-left: 3px;
+  background: none;
+  border: none
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_text {
+    font-family: "Koulen", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    &_red {
+      color: #c80f0f;
+    }
+  }
+  &_menu{ 
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+  }
+  &__opened { 
+    padding: 16px 10px;
+    &>h3{ 
+      font-size: 30px;
+    }
+  }
+
+}

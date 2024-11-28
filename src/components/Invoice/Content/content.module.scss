@@ -1,0 +1,30 @@
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  align-self: center;
+  width: 351px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.07);
+  background: #fff;
+  border-radius: 16px;
+  &_top {
+    display: flex;
+    justify-content: flex-end;
+    &_closeBtn {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+  }
+  &_title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+  }
+  &_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}

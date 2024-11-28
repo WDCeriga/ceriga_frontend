@@ -1,0 +1,16 @@
+.container { 
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  &_title{
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 400;
+    color: #303030; 
+  }
+  &_list{ 
+    display: flex;
+    align-items: center;
+    column-gap: 7.5px;
+  }
+}

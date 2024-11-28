@@ -1,0 +1,16 @@
+.btn {
+  cursor: pointer;
+  margin-top: 40px;
+  padding: 12px 60px;
+  border: 2px solid #f66;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #efefef;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: #c80f0f;
+
+  @media (min-width: 768px) {
+    padding: 12px 74px;
+  }
+}

@@ -1,0 +1,28 @@
+.item {
+  list-style: none;
+  &_label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 171%;
+    }
+    &_input {
+      border: 1px solid #efefef;
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 200px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 171%;
+      color: #000;
+      transition: all 0.3s ease;
+      &:focus {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.07);
+        outline: none;
+      }
+    }
+  }
+}

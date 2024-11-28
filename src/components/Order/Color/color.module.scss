@@ -1,0 +1,17 @@
+@import '../../../utils/mixins.scss';
+
+.params {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-end;
+  &_settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 2px;
+    @media (min-width: 768px) {
+      row-gap: 16px;
+    }
+  }
+}

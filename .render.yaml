@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: smile-bot
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    repo: https://github.com/SmileBot-Project/SmileBot.sk
+    branch: develop

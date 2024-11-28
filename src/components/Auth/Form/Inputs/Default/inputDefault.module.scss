@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 100%;
+  &_label {
+    font-weight: 500;
+    font-size: 12px;
+    color: #787774;
+  }
+  &_input {
+    padding: 7px 10px;
+    width: calc(100% - 20px);
+    height: 25px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.57);
+    background: #ffffff00;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+
+    &:focus {
+      animation: focusAnimation 0.3s forwards;
+      outline: none;
+    }
+
+    @keyframes focusAnimation {
+      from {
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35),
+          inset 0 0 0 1px rgba(0, 0, 0, 0.57);
+        background: #ffffff00;
+      }
+      to {
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5),
+          inset 0 0 0 1px rgba(0, 0, 0, 0.8);
+        background: #ffffff;
+      }
+    }
+  }
+}

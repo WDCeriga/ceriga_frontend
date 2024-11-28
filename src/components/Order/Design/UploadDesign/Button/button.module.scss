@@ -1,0 +1,18 @@
+.button {
+  cursor: pointer;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 100px;
+  border: 2px solid #f66;
+  background: #c80f0f;
+  box-shadow: 0px 4px 10px 0px rgba(172, 67, 67, 0.23);
+  &_text {
+    color: #efefef;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
