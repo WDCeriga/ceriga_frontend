@@ -46,7 +46,7 @@ const HeaderMenu: FC<IMenuInfo> = ({
   const dispatch = useDispatch<AppDispatch>();
   const handleLogOut = () => {
     localStorage.clear();
-    window.location.href = "www.ceriga.co";
+    window.location.href = "https://ceriga.co/";
     // redirect to link
 
   };
