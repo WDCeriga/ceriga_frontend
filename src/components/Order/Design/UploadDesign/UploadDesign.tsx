@@ -55,7 +55,7 @@ const UploadDesign: FC<IUploadDesign> = ({ handleClose }) => {
         filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Tank Top).pdf";
         break;
       case "T-shirt":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Tshirt).pdf";
+        filePath = "test.pdf";
         break;
       case "Hoodie":
         filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Hoodie).pdf";
