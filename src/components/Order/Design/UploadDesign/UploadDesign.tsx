@@ -46,25 +46,25 @@ const UploadDesign: FC<IUploadDesign> = ({ handleClose }) => {
     let filePath = "";
     switch (orderState.name) {
       case "Crewneck":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Crewneck).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (Crewneck).pdf";
         break;
       case "Sweat Pants":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (SweatPants).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (SweatPants).pdf";
         break;
       case "Tank Top":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Tank Top).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (Tank Top).pdf";
         break;
       case "T-shirt":
-        filePath = "test.pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (Tshirt).pdf";
         break;
       case "Hoodie":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (Hoodie).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (Hoodie).pdf";
         break;
       case "Zip Up Hoodie":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide (ZipUp Hoodie).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (ZipUp Hoodie).pdf";
         break;
       case "uncuffed":
-        filePath = "public/pdf/Ceriga Tech Pack Design Submission Guide(Uncuffed Sweatpants).pdf";
+        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide(Uncuffed Sweatpants).pdf";
         break;
 
     }
