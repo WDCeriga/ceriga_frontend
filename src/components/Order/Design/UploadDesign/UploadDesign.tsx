@@ -46,7 +46,7 @@ const UploadDesign: FC<IUploadDesign> = ({ handleClose }) => {
     let filePath = "";
     switch (orderState.name) {
       case "Crewneck":
-        filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (Crewneck).pdf";
+        filePath = "pdf/Ceriga Tech Pack Design Submission Guide (Crewneck).pdf";
         break;
       case "Sweat Pants":
         filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (SweatPants).pdf";
