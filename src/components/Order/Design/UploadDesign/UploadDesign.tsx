@@ -63,7 +63,7 @@ const UploadDesign: FC<IUploadDesign> = ({ handleClose }) => {
       case "Zip Up Hoodie":
         filePath = "/pdf/Ceriga Tech Pack Design Submission Guide (ZipUp Hoodie).pdf";
         break;
-      case "uncuffed":
+      case "Uncuffed":
         filePath = "/pdf/Ceriga Tech Pack Design Submission Guide(Uncuffed Sweatpants).pdf";
         break;
 
