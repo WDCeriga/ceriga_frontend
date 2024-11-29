@@ -69,8 +69,8 @@ const UploadDesign: FC<IUploadDesign> = ({ handleClose }) => {
 
     }
     const link = document.createElement("a");// Create a temporary link element
-    link.download = filePath;// Name of the file when downloaded
-    console.log(filePath);
+    link.download = filePath.split("/").pop(); // Extract the file name for download
+  console.log(filePath);
 
     link.href = filePath;
     document.body.appendChild(link);
