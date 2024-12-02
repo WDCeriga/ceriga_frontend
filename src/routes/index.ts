@@ -3,8 +3,8 @@ const routes = {
 
   //API ROUTES
   server: {
-    //base: "https://ceriga-backend-test.vercel.app",
-    base: "https://sudio-ceriga-backend.onrender.com",
+    base: "https://ceriga-backend-test.vercel.app",
+    //base: "https://sudio-ceriga-backend.onrender.com",
     //base: "http://localhost:4000",
     auth: "/auth",
     refresh: "/auth/refresh",
