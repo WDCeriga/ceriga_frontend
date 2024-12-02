@@ -1,10 +1,42 @@
 import { IOrderState } from "@interfaces/bll/order.interface";
 import { IParamPreviewOrder } from "@interfaces/order/paramsPreview.interface";
 
-export const mapOrderStateToParams = (state: IOrderState) => {
+export const mapOrderStateToParams = async (state: IOrderState) => {
   const currentId = state.draftId ?? state._id;
-  //const currentId = state._id;
-  console.log(currentId);
+  let links = {
+    design: '',
+    neck: '',
+    label: '',
+    package: ''
+  };
+
+  try {
+    const response = await fetch('https://storage.googleapis.com/storage/v1/b/ceriga-storage-bucket/o/');
+    const data = await response.json();
+
+    if (Array.isArray(data.items)) {
+      const names = data.items.map((item) => item.name);
+      
+      links.design = names.find(name => name.includes(`${currentId}/designUploads`)) || '';
+      links.neck = names.find(name => name.includes(`${currentId}/neckUploads`)) || '';
+      links.label = names.find(name => name.includes(`${currentId}/labelUploads`)) || '';
+      links.package = names.find(name => name.includes(`${currentId}/packageUploads`)) || '';
+
+      // Update the links with the full URL
+      Object.keys(links).forEach(key => {
+        if (links[key]) {
+          links[key] = `https://storage.googleapis.com/ceriga-storage-bucket/${links[key]}`;
+        }
+      });
+    } else {
+      console.error('No items found or invalid items structure in the response.');
+    }
+
+    console.log("Updated Links:", links);
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 
   const data: IParamPreviewOrder[] = [
     {
@@ -32,7 +64,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
         {
           title: "Design",
           isLink: true,
-          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/neckUploads/`,
+          link: links.neck,
         },
         {
           title: "Design Options",
@@ -51,7 +83,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "",
           isLink: true,
           titleStyle: "bold",
-          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/labelUploads/`,
+          link: links.label,
         },
       ],
     },
@@ -63,7 +95,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "Design",
           isLink: true,
           titleStyle: "bold",
-          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/designUploads/`,
+          link: links.design,
         },
         { title: "Extra Details", value: state.stitching.description || "" },
         { title: "Stitching", value: state.stitching.type || "" },
@@ -76,7 +108,6 @@ export const mapOrderStateToParams = (state: IOrderState) => {
       title: "Packaging",
       paramsType: "list",
       subparameters: [
-
         {
           title: "Packaging Type",
           value: state.package.isPackage ? "Packaged" : "Unpackage",
@@ -86,7 +117,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "Images",
           isLink: true,
           titleStyle: "bold",
-          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/packageUploads/`,
+          link: links.package,
         },
       ],
     },
@@ -101,3 +132,4 @@ export const mapOrderStateToParams = (state: IOrderState) => {
   ];
   return data;
 };
+
