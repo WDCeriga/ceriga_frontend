@@ -16,11 +16,21 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
 
     if (Array.isArray(data.items)) {
       const names = data.items.map((item) => item.name);
-      
-      links.design = names.find(name => name.includes(`${currentId}/designUploads`)) || '';
-      links.neck = names.find(name => name.includes(`${currentId}/neckUploads`)) || '';
-      links.label = names.find(name => name.includes(`${currentId}/labelUploads`)) || '';
-      links.package = names.find(name => name.includes(`${currentId}/packageUploads`)) || '';
+
+      console.log("Names:", names);
+
+      // Helper function to find a valid file link
+      const findValidLink = (folder: string) => {
+        const folderContent = names.filter(name => name.startsWith(`${currentId}/${folder}/`) && name !== `${currentId}/${folder}/`);
+        return folderContent.length > 0 ? folderContent[0] : '';
+      };
+
+      links.design = findValidLink('designUploads');
+      links.neck = findValidLink('neckUploads');
+      links.label = findValidLink('labelUploads');
+      links.package = findValidLink('packageUploads');
+
+      console.log("Links:", links);
 
       // Update the links with the full URL
       Object.keys(links).forEach(key => {
