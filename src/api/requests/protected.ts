@@ -118,6 +118,16 @@ const continueOrderApi = async (draftId: string) => {
 //Upload Files
 
 const uploadDesignApi = async (formData: FormData, draftId: string) => {
+  // Ensure the file field is named 'file'
+  const fileField = formData.get('file');
+  if (!fileField) {
+    const file = formData.get('image'); // or whatever field name you're using
+    if (file) {
+      formData.delete('image'); // or the original field name
+      formData.append('file', file);
+    }
+  }
+
   const { data } = await protectedApi.post(
     `${routes.server.drafts.uploadDesign}?draftId=${draftId}`,
     formData,
@@ -127,10 +137,19 @@ const uploadDesignApi = async (formData: FormData, draftId: string) => {
       },
     }
   );
-  return data.file.filename;
+  return data.fileUrl; // Changed from data.file.filename to data.fileUrl
 };
 
 const uploadLabelApi = async (formData: FormData, draftId: string) => {
+  const fileField = formData.get('file');
+  if (!fileField) {
+    const file = formData.get('image');
+    if (file) {
+      formData.delete('image');
+      formData.append('file', file);
+    }
+  }
+
   const { data } = await protectedApi.post(
     `${routes.server.drafts.uploadLabel}?draftId=${draftId}`,
     formData,
@@ -140,10 +159,19 @@ const uploadLabelApi = async (formData: FormData, draftId: string) => {
       },
     }
   );
-  return data.file.filename;
+  return data.fileUrl;
 };
 
 const uploadNeckApi = async (formData: FormData, draftId: string) => {
+  const fileField = formData.get('file');
+  if (!fileField) {
+    const file = formData.get('image');
+    if (file) {
+      formData.delete('image');
+      formData.append('file', file);
+    }
+  }
+
   const { data } = await protectedApi.post(
     `${routes.server.drafts.uploadNeck}?draftId=${draftId}`,
     formData,
@@ -153,10 +181,19 @@ const uploadNeckApi = async (formData: FormData, draftId: string) => {
       },
     }
   );
-  return data.file.filename;
+  return data.fileUrl;
 };
 
 const uploadPackageApi = async (formData: FormData, draftId: string) => {
+  const fileField = formData.get('file');
+  if (!fileField) {
+    const file = formData.get('image');
+    if (file) {
+      formData.delete('image');
+      formData.append('file', file);
+    }
+  }
+
   const { data } = await protectedApi.post(
     `${routes.server.drafts.uploadPackage}?draftId=${draftId}`,
     formData,
@@ -166,8 +203,10 @@ const uploadPackageApi = async (formData: FormData, draftId: string) => {
       },
     }
   );
-  return data.file.filename;
+  return data.fileUrl;
 };
+
+
 
 const getImagesUploadApi = async (draftId: string, type: string) => {
   const { data } = await protectedApi.get(
@@ -428,8 +467,8 @@ const saveNewPriceInProductApi = async (product: IProductChangePrice) => {
   return data;
 };
 
-const getDeliveryInfoApi = async (id: string) =>  {
-  const {data} = await protectedApi.get(`${routes.server.deliveryInfo}?orderId=${id}`);
+const getDeliveryInfoApi = async (id: string) => {
+  const { data } = await protectedApi.get(`${routes.server.deliveryInfo}?orderId=${id}`);
   return data
 }
 
