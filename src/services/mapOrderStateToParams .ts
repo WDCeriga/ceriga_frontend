@@ -2,7 +2,10 @@ import { IOrderState } from "@interfaces/bll/order.interface";
 import { IParamPreviewOrder } from "@interfaces/order/paramsPreview.interface";
 
 export const mapOrderStateToParams = (state: IOrderState) => {
-  const currentId = state.draftId ? state.draftId : state.orderId;
+  const currentId = state.draftId ?? state._id;
+  //const currentId = state._id;
+  console.log(currentId);
+
   const data: IParamPreviewOrder[] = [
     {
       title: "Fabrics",
@@ -29,7 +32,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
         {
           title: "Design",
           isLink: true,
-          link: `/order/images/${currentId}/neckUploads`,
+          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/neckUploads/`,
         },
         {
           title: "Design Options",
@@ -48,7 +51,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "",
           isLink: true,
           titleStyle: "bold",
-          link: `/order/images/${currentId}/labelUploads`,
+          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/labelUploads/`,
         },
       ],
     },
@@ -60,7 +63,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "Design",
           isLink: true,
           titleStyle: "bold",
-          link: `/order/images/${currentId}/designUploads`,
+          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/designUploads/`,
         },
         { title: "Extra Details", value: state.stitching.description || "" },
         { title: "Stitching", value: state.stitching.type || "" },
@@ -73,7 +76,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
       title: "Packaging",
       paramsType: "list",
       subparameters: [
-        
+
         {
           title: "Packaging Type",
           value: state.package.isPackage ? "Packaged" : "Unpackage",
@@ -83,7 +86,7 @@ export const mapOrderStateToParams = (state: IOrderState) => {
           title: "Images",
           isLink: true,
           titleStyle: "bold",
-          link: `/order/images/${currentId}/packageUploads`,
+          link: `https://storage.googleapis.com/ceriga-storage-bucket/${currentId}/packageUploads/`,
         },
       ],
     },
