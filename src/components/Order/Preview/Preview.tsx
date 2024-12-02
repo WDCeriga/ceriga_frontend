@@ -37,17 +37,24 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
 
   useEffect(() => {
     const fetchOrderData = async () => {
-      if (isOrder && id) {
-        const data = await getOrderItemApi(id);
-        setPhoto(data.productType || "");
-        setColor(data.color.hex);
-        setPreviewData(mapOrderStateToParams(data));
-      } else if (previewData === null) {
-        setPhoto(order.productType || "");
-        setColor(order.color.hex || "#333");
-        setPreviewData(mapOrderStateToParams(order));
+      try {
+        if (isOrder && id) {
+          const data = await getOrderItemApi(id);
+          setPhoto(data.productType || "");
+          setColor(data.color.hex);
+          const mappedData = await mapOrderStateToParams(data);
+          setPreviewData(mappedData);
+        } else if (previewData === null) {
+          setPhoto(order.productType || "");
+          setColor(order.color.hex || "#333");
+          const mappedData = await mapOrderStateToParams(order);
+          setPreviewData(mappedData);
+        }
+      } catch (error) {
+        console.error("Error fetching order data:", error);
       }
     };
+
     fetchOrderData();
   }, [isOrder, id, order, previewData]);
 
@@ -93,7 +100,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
       </div>
       <section className={s.preview}>
         <div className={s.preview_left}>
-          <ProductWithColor color={color} product={photo}  path={order.color.path}/>
+          <ProductWithColor color={color} product={photo} path={order.color.path} />
           <ul className={s.preview_left_list}>
             <ParamPreviewSmall
               name="Subtotal"
