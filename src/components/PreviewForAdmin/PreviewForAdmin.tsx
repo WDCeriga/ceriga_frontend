@@ -18,19 +18,39 @@ interface IPreviewForAdmin {
 const PreviewForAdmin: FC<IPreviewForAdmin> = ({ id }) => {
   const [order, setOrder] = useState<IOrderState | null>(null);
   const [orderData, setOrderData] = useState<IParamPreviewOrder[] | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchOrderData = async () => {
-      const data = await getOrderItemApi(id);
-      setOrder(data);
-      setOrderData(mapOrderStateToParams(data));
+      setIsLoading(true); // Start loading
+      setError(null); // Clear previous errors
+      try {
+        const data = await getOrderItemApi(id);
+        setOrder(data);
+        const mappedData = await mapOrderStateToParams(data);
+        setOrderData(mappedData);
+      } catch (err) {
+        console.error("Failed to fetch or map order data:", err);
+        setError("Failed to load order data.");
+      } finally {
+        setIsLoading(false); // End loading
+      }
     };
-    if (orderData === null) {
-      fetchOrderData();
-    }
-  }, [id, orderData]);
-  if (order === null) {
-    return null;
+
+    fetchOrderData();
+  }, [id]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!order || !orderData) {
+    return <div>No order data available.</div>;
   }
   return (
     <section className={s.preview}>
