@@ -8,7 +8,7 @@ import { changeOrderStep } from "@redux/slices/order";
 import { createOrderApi, getOrderItemApi } from "@api/requests/protected";
 import { IParamPreviewOrder } from "@interfaces/order/paramsPreview.interface";
 import ButtonSelect from "@common/ButtonSelect/ButtonSelect";
-import formatCost from "@services/formatCost";
+import formatCost from "@services/ formatCost";
 import notification from "@services/notification";
 import routes from "@routes/index";
 import TitleWithDescription from "@common/Title/Description/Description";
@@ -28,7 +28,9 @@ interface IOrderPreview {
 const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   const [photo, setPhoto] = useState<string>("");
   const [color, setColor] = useState<string>("");
-  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(null);
+  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(
+    null
+  );
   const { order } = useSelector((state: RootState) => state);
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
@@ -53,10 +55,8 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
       }
     };
 
-    if (!previewData) { // Prevent unnecessary API calls if previewData is already set
-      fetchOrderData();
-    }
-  }, [isOrder, id, order]); // Only re-run when isOrder, id, or order changes
+    fetchOrderData();
+  }, [isOrder, id, order, previewData]);
 
   const handlePrevStep = () => {
     if (!isOrder) {
@@ -86,7 +86,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   };
 
   if (previewData === null) {
-    return null; // Prevent rendering if previewData is not yet fetched
+    return null;
   }
 
   return (
