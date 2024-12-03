@@ -28,7 +28,9 @@ interface IOrderPreview {
 const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   const [photo, setPhoto] = useState<string>("");
   const [color, setColor] = useState<string>("");
-  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(null);
+  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(
+    null
+  );
   const { order } = useSelector((state: RootState) => state);
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
@@ -53,10 +55,8 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
       }
     };
 
-    if (!previewData) { // Prevent unnecessary API calls if previewData is already set
-      fetchOrderData();
-    }
-  }, [isOrder, id, order]); // Only re-run when isOrder, id, or order changes
+    fetchOrderData();
+  }, [isOrder, id, order, previewData]);
 
   const handlePrevStep = () => {
     if (!isOrder) {
@@ -86,7 +86,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   };
 
   if (previewData === null) {
-    return null; // Prevent rendering if previewData is not yet fetched
+    return null;
   }
 
   return (
@@ -101,7 +101,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
       <section className={s.preview}>
         <div className={s.preview_left}>
           <ProductWithColor color={color} product={photo} path={order.color.path} />
-          <ul className={s.preview_left_list}>
+       {/* <ul className={s.preview_left_list}>
             <ParamPreviewSmall
               name="Subtotal"
               value={`${formatCost(order.subtotal)} $`}
@@ -112,7 +112,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
               value={`${formatCost(order.subtotal)} $`}
             />
             <ParamPreviewSmall name="Production time" value="6 business days" />
-          </ul>
+          </ul> */}
         </div>
         <div className={s.preview_right}>
           <TitlePreview product={order.productType || ""} />
