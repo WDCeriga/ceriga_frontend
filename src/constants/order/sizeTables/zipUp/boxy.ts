@@ -11,6 +11,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 64 },
       { param: "l", value: 67 },
       { param: "xl", value: 70 },
+      { param: "xxl", value: 72 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 68 },
       { param: "l", value: 70 },
       { param: "xl", value: 72 },
+      { param: "xxl", value: 74 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 62 },
       { param: "l", value: 64 },
       { param: "xl", value: 66 },
+      { param: "xxl", value: 68 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 63 },
       { param: "xl", value: 65 },
+      { param: "xxl", value: 66 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 56 },
       { param: "l", value: 57 },
       { param: "xl", value: 58 },
+      { param: "xxl", value: 59 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 33 },
       { param: "l", value: 34 },
       { param: "xl", value: 35 },
+      { param: "xxl", value: 36 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 13.5 },
       { param: "l", value: 14 },
       { param: "xl", value: 14.5 },
+      { param: "xxl", value: 15 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 12.5 },
       { param: "l", value: 13 },
       { param: "xl", value: 13.5 },
+      { param: "xxl", value: 14 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 6 },
       { param: "l", value: 6 },
       { param: "xl", value: 6 },
+      { param: "xxl", value: 6 },
     ],
   },
   {
@@ -110,6 +119,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 29 },
       { param: "l", value: 30 },
       { param: "xl", value: 31 },
+      { param: "xxl", value: 32 },
     ],
   },
   {
@@ -121,6 +131,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 39 },
       { param: "l", value: 40 },
       { param: "xl", value: 41 },
+      { param: "xxl", value: 42 },
     ],
   },
   {
@@ -132,6 +143,7 @@ export const boxyZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 65 },
       { param: "l", value: 67 },
       { param: "xl", value: 69 },
+      { param: "xxl", value: 71 },
     ],
   },
 ];
