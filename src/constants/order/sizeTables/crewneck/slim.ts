@@ -11,6 +11,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 65 },
       { param: "l", value: 67 },
       { param: "xl", value: 69 },
+      { param: "xxl", value: 71 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 62 },
       { param: "l", value: 64 },
       { param: "xl", value: 66 },
+      { param: "xxl", value: 68 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 58 },
       { param: "l", value: 59 },
       { param: "xl", value: 60 },
+      { param: "xxl", value: 61 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 57 },
       { param: "l", value: 58 },
       { param: "xl", value: 59 },
+      { param: "xxl", value: 60 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 54 },
       { param: "l", value: 55 },
       { param: "xl", value: 56 },
+      { param: "xxl", value: 57 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 30 },
       { param: "l", value: 30.5 },
       { param: "xl", value: 31 },
+      { param: "xxl", value: 31.5 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 12 },
       { param: "l", value: 12.5 },
       { param: "xl", value: 13 },
+      { param: "xxl", value: 13.5 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 11 },
       { param: "l", value: 11.5 },
       { param: "xl", value: 12 },
+      { param: "xxl", value: 12.5 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 2 },
       { param: "l", value: 2 },
       { param: "xl", value: 2 },
+      { param: "xxl", value: 2 },
     ],
   },
   {
@@ -110,6 +119,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 6 },
       { param: "l", value: 6 },
       { param: "xl", value: 6 },
+      { param: "xxl", value: 6 },
     ],
   },
   {
@@ -121,6 +131,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 18 },
       { param: "l", value: 18 },
       { param: "xl", value: 18 },
+      { param: "xxl", value: 18 },
     ],
   },
   {
@@ -132,6 +143,7 @@ export const slimCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 62 },
       { param: "xl", value: 63 },
+      { param: "xxl", value: 64 },
     ],
   },
 ];
