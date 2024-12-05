@@ -11,6 +11,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 64 },
       { param: "l", value: 67 },
       { param: "xl", value: 70 },
+      { param: "xxl", value: 73 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 46 },
       { param: "l", value: 48 },
       { param: "xl", value: 50 },
+      { param: "xxl", value: 52 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 44 },
       { param: "l", value: 46 },
       { param: "xl", value: 48 },
+      { param: "xxl", value: 50 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 48 },
       { param: "l", value: 50 },
       { param: "xl", value: 52 },
+      { param: "xxl", value: 54 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 25 },
       { param: "l", value: 26 },
       { param: "xl", value: 27 },
+      { param: "xxl", value: 28 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 19 },
       { param: "l", value: 19 },
       { param: "xl", value: 19 },
+      { param: "xxl", value: 19 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 10 },
       { param: "l", value: 10 },
       { param: "xl", value: 10 },
+      { param: "xxl", value: 10 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 3 },
       { param: "l", value: 3 },
       { param: "xl", value: 3 },
+      { param: "xxl", value: 3 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const regularTankTopTable: ITableSizeRow[] = [
       { param: "m", value: 5 },
       { param: "l", value: 5 },
       { param: "xl", value: 5 },
+      { param: "xxl", value: 5 },
     ],
   },
 ];
