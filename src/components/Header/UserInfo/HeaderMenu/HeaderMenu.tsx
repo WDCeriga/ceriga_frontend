@@ -88,12 +88,12 @@ const HeaderMenu: FC<IMenuInfo> = ({
         <p className={s.menu_info_role}>{formatRole(role)}</p>
       </div>
       <ul className={s.menu_list}>
-        <li className={s.menu_list_item}>
+ {/*    <li className={s.menu_list_item}>
           <Link className={s.menu_list_item_link} to={routes.setting}>
             <p className={s.menu_list_item_link_text}>Setting</p>
             <SettingsIcon width="16" height="16" />
           </Link>
-        </li>
+        </li>*/}  
         <li className={s.menu_list_item}>
           <button className={s.menu_list_item_link} onClick={handleLogOut}>
             <p className={s.menu_list_item_link_text}>Log Out</p>
