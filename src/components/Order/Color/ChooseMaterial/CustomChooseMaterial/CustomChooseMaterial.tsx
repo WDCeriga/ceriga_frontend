@@ -39,7 +39,7 @@ const CustomChooseMaterial: FC<ICustomChooseMaterial> = ({ closeEvent }) => {
       closeEvent();
     } else {
       notification.error(
-        'Invalid material value or typeActive is "Choose material"'
+        'choose a material and enter custom gsm value'
       );
     }
   };
@@ -53,7 +53,7 @@ const CustomChooseMaterial: FC<ICustomChooseMaterial> = ({ closeEvent }) => {
         value={customValue}
         onChange={handleCustomValueChange}
         className={s.container_input}
-        placeholder="Write custom value"
+        placeholder="Write custom gsm value"
       />
       <button onClick={handleSaveNewValue} className={s.container_btn}>
         Save
