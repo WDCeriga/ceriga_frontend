@@ -11,6 +11,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 66 },
       { param: "l", value: 68 },
       { param: "xl", value: 70 },
+      { param: "xxl", value: 72 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 63 },
       { param: "xl", value: 65 },
+      { param: "xxl", value: 67 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 58 },
       { param: "l", value: 59 },
       { param: "xl", value: 60 },
+      { param: "xxl", value: 61 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 57 },
       { param: "l", value: 58 },
       { param: "xl", value: 59 },
+      { param: "xxl", value: 60 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 54 },
       { param: "l", value: 55 },
       { param: "xl", value: 56 },
+      { param: "xxl", value: 57 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 30 },
       { param: "l", value: 31 },
       { param: "xl", value: 32 },
+      { param: "xxl", value: 33 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 11.5 },
       { param: "l", value: 12 },
       { param: "xl", value: 12.5 },
+      { param: "xxl", value: 13 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 11 },
       { param: "l", value: 11.5 },
       { param: "xl", value: 12 },
+      { param: "xxl", value: 12.5 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 6 },
       { param: "l", value: 6 },
       { param: "xl", value: 6 },
+      { param: "xxl", value: 6 },
     ],
   },
   {
@@ -110,6 +119,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 27 },
       { param: "l", value: 28 },
       { param: "xl", value: 29 },
+      { param: "xxl", value: 30 },
     ],
   },
   {
@@ -121,6 +131,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 37 },
       { param: "l", value: 38 },
       { param: "xl", value: 39 },
+      { param: "xxl", value: 40 },
     ],
   },
   {
@@ -132,6 +143,7 @@ export const slimHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 62 },
       { param: "xl", value: 63 },
+      { param: "xxl", value: 64 },
     ],
   },
 ];
