@@ -17,7 +17,7 @@ const ModalProduct: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { productId } = useSelector((state: RootState) => state.ui.modal);
   const { productOpen: product } = useSelector(
-    (state: RootState) => state.products
+    (state: RootState) => state.products,
   );
   useEffect(() => {
     dispatch(getProductInfo(productId || ""));
@@ -91,23 +91,42 @@ const ModalProduct: FC = () => {
               <li className={s.item}>
                 <p className={s.item_left}>Fabric</p>
                 <p className={s.item_right}>
-                  {product.fabric
-                    .map(
-                      (fabric) =>
-                        `${fabric.type} (€${fabric.cost.toFixed(2)} each)`
-                    )
-                    .join(", ")}
+                  {product.fabric.map((fabric) => `${fabric.type} `).join(", ")}
                 </p>
               </li>
               <li className={s.item}>
                 <p className={s.item_left}>Color options</p>
                 <p className={s.item_right}>
-                  {`Up to ${product.colorOptions} colors, additional colors €${product.additionalColorCost} each`}
+                  {`Up to ${product.colorOptions} colors`}
                 </p>
               </li>
               <li className={s.item}>
                 <p className={s.item_left}>Lead time</p>
                 <p className={s.item_right}>{product.leadTime}</p>
+              </li>
+              <li className={s.item}>
+                <p className={s.item_left}>Origin</p>
+                <p className={s.item_right}>
+                  {"Our production line is in Lisbon, Portugal"}
+                </p>
+              </li>
+              <li className={s.item}>
+                <p className={s.item_left}>Label option</p>
+                <p className={s.item_right}>{"We provide custom labelling"}</p>
+              </li>
+              <li className={s.item}>
+                <p className={s.item_left}>Packaging</p>
+                <p className={s.item_right}>
+                  {"Custom packaging is available  "}
+                </p>
+              </li>
+              <li className={s.item}>
+                <p className={s.item_left}>Fading</p>
+                <p className={s.item_right}>
+                  {
+                    "We produce Shoulder Sun fading, Shoulder & Bottom Sun fading, Circular Sun fading and All-over Sun fading"
+                  }
+                </p>
               </li>
             </ul>
           </>
