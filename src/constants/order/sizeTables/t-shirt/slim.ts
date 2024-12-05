@@ -1,6 +1,7 @@
 import { ITableSizeRow } from "@interfaces/order/sizes.interface";
 
 // Slim T-shirt Size Table
+// Slim T-shirt Size Table
 export const slimTshirtTable: ITableSizeRow[] = [
   {
     name: "Total Length",
@@ -11,6 +12,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 71 },
       { param: "l", value: 73 },
       { param: "xl", value: 75 },
+      { param: "xxl", value: 77 },
     ],
   },
   {
@@ -22,6 +24,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 59 },
       { param: "l", value: 60 },
       { param: "xl", value: 61 },
+      { param: "xxl", value: 62 },
     ],
   },
   {
@@ -33,6 +36,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 59 },
       { param: "l", value: 60 },
       { param: "xl", value: 61 },
+      { param: "xxl", value: 62 },
     ],
   },
   {
@@ -44,6 +48,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 23 },
       { param: "l", value: 24 },
       { param: "xl", value: 25 },
+      { param: "xxl", value: 26 },
     ],
   },
   {
@@ -55,6 +60,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 24 },
       { param: "l", value: 24.5 },
       { param: "xl", value: 25 },
+      { param: "xxl", value: 25.5 },
     ],
   },
   {
@@ -66,6 +72,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 21.5 },
       { param: "l", value: 22 },
       { param: "xl", value: 22.5 },
+      { param: "xxl", value: 23 },
     ],
   },
   {
@@ -77,6 +84,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 2 },
       { param: "l", value: 2 },
       { param: "xl", value: 2 },
+      { param: "xxl", value: 2 },
     ],
   },
   {
@@ -88,6 +96,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 18 },
       { param: "l", value: 18 },
       { param: "xl", value: 18 },
+      { param: "xxl", value: 18 },
     ],
   },
   {
@@ -99,6 +108,7 @@ export const slimTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 59 },
       { param: "l", value: 60 },
       { param: "xl", value: 61 },
+      { param: "xxl", value: 62 },
     ],
   },
-]
+];
