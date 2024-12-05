@@ -11,6 +11,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 100 },
       { param: "l", value: 103 },
       { param: "xl", value: 106 },
+      { param: "xxl", value: 109 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 45 },
       { param: "l", value: 48 },
       { param: "xl", value: 51 },
+      { param: "xxl", value: 54 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 34 },
       { param: "l", value: 37 },
       { param: "xl", value: 40 },
+      { param: "xxl", value: 43 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 28 },
       { param: "l", value: 30 },
       { param: "xl", value: 32 },
+      { param: "xxl", value: 34 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 24 },
       { param: "l", value: 25 },
       { param: "xl", value: 26 },
+      { param: "xxl", value: 27 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 32 },
       { param: "l", value: 32 },
       { param: "xl", value: 32 },
+      { param: "xxl", value: 32 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const straightLeggedUncuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 36 },
       { param: "l", value: 36 },
       { param: "xl", value: 36 },
+      { param: "xxl", value: 36 },
     ],
   },
 ];
