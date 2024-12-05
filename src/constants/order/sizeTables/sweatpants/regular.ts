@@ -1,6 +1,7 @@
 import { ITableSizeRow } from "@interfaces/order/sizes.interface";
 
 // Regular Cuffed Sweat Pants Size Table
+
 export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
   {
     name: "Leg Length incl. Waistband",
@@ -11,6 +12,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 100 },
       { param: "l", value: 103 },
       { param: "xl", value: 106 },
+      { param: "xxl", value: 109 },
     ],
   },
   {
@@ -22,6 +24,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 43 },
       { param: "l", value: 46 },
       { param: "xl", value: 49 },
+      { param: "xxl", value: 52 },
     ],
   },
   {
@@ -33,6 +36,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 34 },
       { param: "l", value: 37 },
       { param: "xl", value: 40 },
+      { param: "xxl", value: 43 },
     ],
   },
   {
@@ -44,6 +48,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 29 },
       { param: "l", value: 31 },
       { param: "xl", value: 33 },
+      { param: "xxl", value: 35 },
     ],
   },
   {
@@ -55,6 +60,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 22 },
       { param: "l", value: 23 },
       { param: "xl", value: 24 },
+      { param: "xxl", value: 25 },
     ],
   },
   {
@@ -66,6 +72,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 30 },
       { param: "l", value: 30 },
       { param: "xl", value: 30 },
+      { param: "xxl", value: 30 },
     ],
   },
   {
@@ -77,17 +84,7 @@ export const regularCuffedSweatPantsTable: ITableSizeRow[] = [
       { param: "m", value: 34 },
       { param: "l", value: 34 },
       { param: "xl", value: 34 },
+      { param: "xxl", value: 34 },
     ],
   },
-  {
-    name: "Back Rise incl. Waistband",
-    char: "H",
-    list: [
-      { param: "xs", value: 34 },
-      { param: "s", value: 34 },
-      { param: "m", value: 34 },
-      { param: "l", value: 34 },
-      { param: "xl", value: 34 },
-    ],
-  }
-]
+];
