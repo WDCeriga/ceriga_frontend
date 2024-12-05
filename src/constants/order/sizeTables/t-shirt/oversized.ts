@@ -11,6 +11,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 73 },
       { param: "l", value: 75 },
       { param: "xl", value: 77 },
+      { param: "xxl", value: 79 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 67 },
       { param: "l", value: 69 },
       { param: "xl", value: 71 },
+      { param: "xxl", value: 73 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 67 },
       { param: "l", value: 69 },
       { param: "xl", value: 71 },
+      { param: "xxl", value: 73 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 26 },
       { param: "l", value: 27 },
       { param: "xl", value: 28 },
+      { param: "xxl", value: 29 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 26.5 },
       { param: "l", value: 27 },
       { param: "xl", value: 27.5 },
+      { param: "xxl", value: 28 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 23.5 },
       { param: "l", value: 24 },
       { param: "xl", value: 24.5 },
+      { param: "xxl", value: 25 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 2 },
       { param: "l", value: 2 },
       { param: "xl", value: 2 },
+      { param: "xxl", value: 2 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 18 },
       { param: "l", value: 18 },
       { param: "xl", value: 18 },
+      { param: "xxl", value: 18 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const oversizedTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 62 },
       { param: "l", value: 63 },
       { param: "xl", value: 64 },
+      { param: "xxl", value: 65 },
     ],
   },
-]
+];
