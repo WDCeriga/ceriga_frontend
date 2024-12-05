@@ -72,7 +72,7 @@ const authSlice = createSlice({
       if (refresh) localSetItem<string>("refresh", refresh);
     });
     builder.addCase(signIn.rejected, (state) => {
-      notification.error("Invalid auth");
+      notification.error("Something went wrong with your sign in");
       state.isLoading = false;
     });
 
@@ -94,14 +94,14 @@ const authSlice = createSlice({
 
     builder.addCase(getSocialAuth.fulfilled, (state, { payload }) => {
       const { token, refreshToken } = payload || {};
-    
+
       state.token = token;
       state.refresh = refreshToken;
       if (token) localSetItem<string>("token", token);
       if (refreshToken) localSetItem<string>("refresh", refreshToken);
     });
     builder.addCase(getSocialAuth.rejected, (state) => {
-      state.token = null; 
+      state.token = null;
     });
   },
 });
