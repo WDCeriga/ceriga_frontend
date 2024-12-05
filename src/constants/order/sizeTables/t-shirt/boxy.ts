@@ -11,6 +11,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 69 },
       { param: "l", value: 71 },
       { param: "xl", value: 73 },
+      { param: "xxl", value: 75 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 62 },
       { param: "xl", value: 63 },
+      { param: "xxl", value: 64 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 61 },
       { param: "l", value: 62 },
       { param: "xl", value: 63 },
+      { param: "xxl", value: 64 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 24 },
       { param: "l", value: 25 },
       { param: "xl", value: 26 },
+      { param: "xxl", value: 27 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 25 },
       { param: "l", value: 25.5 },
       { param: "xl", value: 26 },
+      { param: "xxl", value: 26.5 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 22 },
       { param: "l", value: 22.5 },
       { param: "xl", value: 23 },
+      { param: "xxl", value: 23.5 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 2 },
       { param: "l", value: 2 },
       { param: "xl", value: 2 },
+      { param: "xxl", value: 2 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 18 },
       { param: "l", value: 18 },
       { param: "xl", value: 18 },
+      { param: "xxl", value: 18 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const boxyTshirtTable: ITableSizeRow[] = [
       { param: "m", value: 60 },
       { param: "l", value: 61 },
       { param: "xl", value: 62 },
+      { param: "xxl", value: 63 },
     ],
   },
-]
+];
