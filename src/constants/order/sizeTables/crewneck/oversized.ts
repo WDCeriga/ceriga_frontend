@@ -11,6 +11,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 68 },
       { param: "l", value: 71 },
       { param: "xl", value: 74 },
+      { param: "xxl", value: 77 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 72 },
       { param: "l", value: 74 },
       { param: "xl", value: 76 },
+      { param: "xxl", value: 78 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 65 },
       { param: "l", value: 67 },
       { param: "xl", value: 69 },
+      { param: "xxl", value: 71 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 64 },
       { param: "l", value: 66 },
       { param: "xl", value: 68 },
+      { param: "xxl", value: 70 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 57 },
       { param: "l", value: 58 },
       { param: "xl", value: 59 },
+      { param: "xxl", value: 60 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 33.5 },
       { param: "l", value: 34.5 },
       { param: "xl", value: 35.5 },
+      { param: "xxl", value: 36.5 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 14 },
       { param: "l", value: 14.5 },
       { param: "xl", value: 15 },
+      { param: "xxl", value: 15.5 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 13 },
       { param: "l", value: 13.5 },
       { param: "xl", value: 14 },
+      { param: "xxl", value: 14.5 },
     ],
   },
   {
@@ -99,6 +107,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 2 },
       { param: "l", value: 2 },
       { param: "xl", value: 2 },
+      { param: "xxl", value: 2 },
     ],
   },
   {
@@ -110,6 +119,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 6 },
       { param: "l", value: 6 },
       { param: "xl", value: 6 },
+      { param: "xxl", value: 6 },
     ],
   },
   {
@@ -121,6 +131,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 18 },
       { param: "l", value: 18 },
       { param: "xl", value: 18 },
+      { param: "xxl", value: 18 },
     ],
   },
   {
@@ -132,6 +143,7 @@ export const oversizedCrewneckTable: ITableSizeRow[] = [
       { param: "m", value: 66 },
       { param: "l", value: 68 },
       { param: "xl", value: 70 },
+      { param: "xxl", value: 72 },
     ],
   },
 ];
