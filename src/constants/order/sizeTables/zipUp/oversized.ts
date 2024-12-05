@@ -11,6 +11,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 71 },
       { param: "l", value: 74 },
       { param: "xl", value: 77 },
+      { param: "xxl", value: 80 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 76 },
       { param: "l", value: 78 },
       { param: "xl", value: 80 },
+      { param: "xxl", value: 82 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 65 },
       { param: "l", value: 67 },
       { param: "xl", value: 69 },
+      { param: "xxl", value: 71 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 64 },
       { param: "l", value: 66 },
       { param: "xl", value: 68 },
+      { param: "xxl", value: 69 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 59 },
       { param: "l", value: 60 },
       { param: "xl", value: 61 },
+      { param: "xxl", value: 62 },
     ],
   },
   {
@@ -66,6 +71,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 35 },
       { param: "l", value: 36 },
       { param: "xl", value: 37 },
+      { param: "xxl", value: 38 },
     ],
   },
   {
@@ -77,6 +83,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 14.5 },
       { param: "l", value: 15 },
       { param: "xl", value: 15.5 },
+      { param: "xxl", value: 16 },
     ],
   },
   {
@@ -88,6 +95,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 13.5 },
       { param: "l", value: 14 },
       { param: "xl", value: 14.5 },
+      { param: "xxl", value: 15 },
     ],
   },
   {
@@ -99,28 +107,31 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 6 },
       { param: "l", value: 6 },
       { param: "xl", value: 6 },
+      { param: "xxl", value: 6 },
     ],
   },
   {
     name: "Neck Opening",
     char: "J",
     list: [
-      { param: "xs", value: 29 },
-      { param: "s", value: 30 },
-      { param: "m", value: 31 },
-      { param: "l", value: 32 },
-      { param: "xl", value: 33 },
+      { param: "xs", value: 30 },
+      { param: "s", value: 31 },
+      { param: "m", value: 32 },
+      { param: "l", value: 33 },
+      { param: "xl", value: 34 },
+      { param: "xxl", value: 35 },
     ],
   },
   {
     name: "Hood Height",
     char: "K",
     list: [
-      { param: "xs", value: 39 },
-      { param: "s", value: 40 },
-      { param: "m", value: 41 },
-      { param: "l", value: 42 },
-      { param: "xl", value: 43 },
+      { param: "xs", value: 38 },
+      { param: "s", value: 39 },
+      { param: "m", value: 40 },
+      { param: "l", value: 41 },
+      { param: "xl", value: 42 },
+      { param: "xxl", value: 43 },
     ],
   },
   {
@@ -132,6 +143,7 @@ export const oversizedZipUpHoodieTable: ITableSizeRow[] = [
       { param: "m", value: 67 },
       { param: "l", value: 69 },
       { param: "xl", value: 71 },
+      { param: "xxl", value: 73 },
     ],
   },
 ];
