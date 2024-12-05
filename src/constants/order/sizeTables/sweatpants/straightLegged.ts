@@ -1,7 +1,7 @@
 import { ITableSizeRow } from "@interfaces/order/sizes.interface";
 
 // Straight Legged Cuffed Sweat Pants Size Table
-export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
+export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] = [
   {
     name: "Leg Length incl. Waistband",
     char: "A",
@@ -11,6 +11,7 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 100 },
       { param: "l", value: 103 },
       { param: "xl", value: 106 },
+      { param: "xxl", value: 109 },
     ],
   },
   {
@@ -22,6 +23,7 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 45 },
       { param: "l", value: 48 },
       { param: "xl", value: 51 },
+      { param: "xxl", value: 54 },
     ],
   },
   {
@@ -33,6 +35,7 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 34 },
       { param: "l", value: 37 },
       { param: "xl", value: 40 },
+      { param: "xxl", value: 43 },
     ],
   },
   {
@@ -44,6 +47,7 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 28 },
       { param: "l", value: 30 },
       { param: "xl", value: 32 },
+      { param: "xxl", value: 34 },
     ],
   },
   {
@@ -55,6 +59,7 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 24 },
       { param: "l", value: 25 },
       { param: "xl", value: 26 },
+      { param: "xxl", value: 27 },
     ],
   },
   {
@@ -66,28 +71,19 @@ export const straightLeggedCuffedSweatPantsTable: ITableSizeRow[] =[
       { param: "m", value: 32 },
       { param: "l", value: 32 },
       { param: "xl", value: 32 },
+      { param: "xxl", value: 32 },
     ],
   },
   {
     name: "Back Rise incl. Waistband",
     char: "G",
     list: [
-      { param: "xs", value: 36 },
-      { param: "s", value: 36 },
-      { param: "m", value: 36 },
-      { param: "l", value: 36 },
-      { param: "xl", value: 36 },
+      { param: "xs", value: 35 },
+      { param: "s", value: 35 },
+      { param: "m", value: 35 },
+      { param: "l", value: 35 },
+      { param: "xl", value: 35 },
+      { param: "xxl", value: 35 },
     ],
   },
-  {
-    name: "Back Rise incl. Waistband",
-    char: "H",
-    list: [
-      { param: "xs", value: 36 },
-      { param: "s", value: 36 },
-      { param: "m", value: 36 },
-      { param: "l", value: 36 },
-      { param: "xl", value: 36 },
-    ],
-  }
-]
+];
