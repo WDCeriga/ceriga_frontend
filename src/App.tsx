@@ -8,6 +8,7 @@ import {
 import PrivateAdminRoutes from "guard/AdminRoutes/AdminRoutes";
 import PrivateSuperAdminRoutes from "guard/SuperAdminRoutes/SuperAdminRoutes";
 import { FC } from "react";
+import { Analytics } from "@vercel/analytics/react"; // Import Analytics
 
 import AdminDashboard from "@pages/Admins/Dashboard/Dashboard";
 import AdminOrdersPage from "@pages/Admins/Orders/Orders";
@@ -96,17 +97,18 @@ const router = createBrowserRouter(
         />
         <Route path={routes.adminOrders} element={<AdminOrdersPage />} />
       </Route>
-    </>
+    </>,
   ),
   {
     basename: "/",
-  }
+  },
 );
 
 const App: FC = () => {
   return (
     <>
       <RouterProvider router={router} />
+      <Analytics /> {/* Add Analytics here */}
     </>
   );
 };
