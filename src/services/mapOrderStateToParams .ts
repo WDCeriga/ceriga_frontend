@@ -3,6 +3,7 @@ import { IParamPreviewOrder } from "@interfaces/order/paramsPreview.interface";
 
 export const mapOrderStateToParams = async (state: IOrderState) => {
   const currentId = state.draftId ?? state._id;
+  console.log(currentId);
   let links = {
     design: '',
     neck: '',
