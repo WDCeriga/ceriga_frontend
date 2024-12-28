@@ -54,7 +54,12 @@ const PreviewForAdmin: FC<IPreviewForAdmin> = ({ id }) => {
   }
   return (
     <section className={s.preview}>
-      <div className={s.preview_left}>
+      <div
+        className={s.preview_left}
+        style={{
+          paddingTop: "100px",   // Add padding
+        }}
+      >
         <ProductWithColor
           color={order.color.path || "#333"}
           path={order.color.path}
