@@ -10,7 +10,7 @@ const AdminHeadTableOrders: FC = () => {
     <thead className={s.header}>
       <tr className={s.header_row}>
         <th className={s.header_row_item}>Order</th>
-        {/* <th className={`${s.header_row_item} ${s.email}`}>Email</th> */}
+        <th className={`${s.header_row_item} ${s.email}`}>Email</th> 
         <th className={s.header_row_item}>Order date</th>
         <th className={`${s.header_row_item} ${s.status}`}>Status</th>
         <th className={`${s.header_row_item} ${s.price}`}>
