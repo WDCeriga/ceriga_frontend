@@ -27,7 +27,7 @@ interface IAdminOrderComponent extends IAdminOrder {
 
 const AdminOrderItem: FC<IAdminOrderComponent> = ({
   id,
-  // userEmail,
+  userEmail,
   productType,
   orderData,
   orderStatus,
@@ -71,23 +71,23 @@ const AdminOrderItem: FC<IAdminOrderComponent> = ({
       <td className={`${s.row_item} ${s.typeProd}`}>
         <div className={s.typeWrap}>
           <div className={s.typeName}>
-        {productType}
-        </div>
-        <span className={s.row_item__gray}>{id}</span>
+            {productType}
+          </div>
+          <span className={s.row_item__gray}>{id}</span>
         </div>
       </td>
-      {/* <td className={s.row_item}>
+      <td className={s.row_item}>
         <div className={s.row_item_container}>
           <span className={s.row_item__green}>{userEmail}</span>
-          <button
+          {/*  <button
             onClick={handleCopyUserEmail}
             className={s.row_item_btnCopy}
             aria-label="Copy email"
           >
             <CopyIcon width="24" height="24" />
-          </button>
+  </button>*/}
         </div>
-      </td> */}
+      </td>
       <td className={s.row_item}>{formatDateToNMDDYY(orderData)}</td>
       <td className={`${s.row_item} ${s.row_item_status}`}>
         {role === "superAdmin" ? (
