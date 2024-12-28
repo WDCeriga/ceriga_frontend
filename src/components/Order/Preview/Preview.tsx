@@ -28,9 +28,7 @@ interface IOrderPreview {
 const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   const [photo, setPhoto] = useState<string>("");
   const [color, setColor] = useState<string>("");
-  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(
-    null
-  );
+  const [previewData, setPreviewData] = useState<IParamPreviewOrder[] | null>(null);
   const { order } = useSelector((state: RootState) => state);
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
@@ -55,8 +53,10 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
       }
     };
 
-    fetchOrderData();
-  }, [isOrder, id, order, previewData]);
+    if (!previewData) { // Prevent unnecessary API calls if previewData is already set
+      fetchOrderData();
+    }
+  }, [isOrder, id, order]); // Only re-run when isOrder, id, or order changes
 
   const handlePrevStep = () => {
     if (!isOrder) {
@@ -86,7 +86,7 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
   };
 
   if (previewData === null) {
-    return null;
+    return null; // Prevent rendering if previewData is not yet fetched
   }
 
   return (
@@ -99,14 +99,12 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
         />
       </div>
       <section className={s.preview}>
-
-        <div className={s.preview_left}
-          style={{
-            paddingTop: "100px",   // Add padding
-          }}
-        >
-          <ProductWithColor product={photo} color={""} path={null} />
-          {/* <ul className={s.preview_left_list}>
+        <div className={s.preview_left}style={{
+              paddingTop: "100px",   // Add padding
+            }}>
+         
+            <ProductWithColor color={color} product={photo} path={order.color.path} />
+            {/* <ul className={s.preview_left_list}>
             <ParamPreviewSmall
               name="Subtotal"
               value={`${formatCost(order.subtotal)} $`}
@@ -117,16 +115,16 @@ const OrderPreview: FC<IOrderPreview> = ({ isOrder, id }) => {
               value={`${formatCost(order.subtotal)} $`}
             />
             <ParamPreviewSmall name="Production time" value="6 business days" />
-          </ul> */}
-        </div>
-        <div className={s.preview_right}>
-          <TitlePreview product={order.productType || ""} />
-          <ul className={s.preview_right_list}>
-            {previewData.map((item) => (
-              <ParamMainPreview key={item.title} {...item} />
-            ))}
-          </ul>
-        </div>
+          </ul>*/}
+          </div>
+          <div className={s.preview_right}>
+            <TitlePreview product={order.productType || ""} />
+            <ul className={s.preview_right_list}>
+              {previewData.map((item) => (
+                <ParamMainPreview key={item.title} {...item} />
+              ))}
+            </ul>
+          </div>
       </section>
       <div>
         {!isOrder && (
