@@ -5,7 +5,7 @@ import s from "./button.module.scss";
 
 interface IButtonOrder {
   onEvent: () => void;
-  text: "Go back" | "Next Step" | "Finish Design";
+  text: "Go back" | "Next Step" | "Request Invoice";
   type: "noBg" | "redBg";
   isDisabled?: boolean;
 }
