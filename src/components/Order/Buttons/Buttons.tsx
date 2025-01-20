@@ -29,7 +29,7 @@ const ButtonsOrder: FC<IButtonsOrder> = ({
           isDisabled={!isHaveNext}
           onEvent={handleNextStep}
           type="redBg"
-          text={isFinish ? "Finish Design" : "Next Step"}
+          text={isFinish ? "Request Invoice" : "Next Step"}
         />
       
     </section>
