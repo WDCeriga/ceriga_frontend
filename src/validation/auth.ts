@@ -12,7 +12,7 @@ const validationSchemaSignUp = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
   phone: Yup.string()
     .required("Phone number is required")
-    .matches(/^[+\d]+$/, "Phone number can only contain digits and may start with +")
+    .matches(/^[+\d]+$/, "Phone number can only contain digits and may start with +"),
   password: Yup.string()
     .required("Password is required")
     .min(8, "Password must be at least 8 characters"),
