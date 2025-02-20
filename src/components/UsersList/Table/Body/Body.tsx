@@ -1,11 +1,9 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, useMemo, useCallback } from "react";
 import { useDispatch } from "react-redux";
-
 import { AppDispatch } from "@redux/store";
 import { getUsersList } from "@redux/slices/dashboard";
 import { formatDateToDDMMYY } from "@services/dataConverter";
 import { IUserDashboard } from "@interfaces/bll/dashboard.interface";
-// import { MenuIcon } from "@common/Icons/CommonIcon";
 
 import ChangeManufacturer from "./ChangeManufacturer/ChangeManufacturer";
 import s from "./body.module.scss";
@@ -25,41 +23,44 @@ const BodyUsersTable: FC<IBodyUserTable> = ({
 }) => {
   const [isOpenRoleChanger, setIsOpenRoleChanger] = useState<string>("");
   const dispatch = useDispatch<AppDispatch>();
+
   useEffect(() => {
-    dispatch(getUsersList());
-  }, [dispatch]);
+    if (users.length === 0) {
+      dispatch(getUsersList());
+    }
+  }, [dispatch, users]);
 
-  const handleToggleRoleChanger = (idChanger: string) =>
-    setIsOpenRoleChanger((prev) => (prev === idChanger ? "" : idChanger));
-
-  const sortedUsers = users.slice().sort((a, b) => {
+  const sortedUsers = useMemo(() => {
     const roleOrder: Record<string, number> = {
       superAdmin: 1,
       admin: 2,
       user: 3,
     };
-    return (
-      roleOrder[a.role as keyof typeof roleOrder] -
-      roleOrder[b.role as keyof typeof roleOrder]
-    );
-  });
 
-  // Pagination logic
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedUsers = sortedUsers.slice(startIndex, endIndex);
+    return users.slice().sort((a, b) => {
+      return (
+        roleOrder[a.role as keyof typeof roleOrder] -
+        roleOrder[b.role as keyof typeof roleOrder]
+      );
+    });
+  }, [users]);
+
+  const paginatedUsers = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return sortedUsers.slice(startIndex, startIndex + itemsPerPage);
+  }, [currentPage, itemsPerPage, sortedUsers]);
+
+  const handleToggleRoleChanger = useCallback(
+    (idChanger: string) =>
+      setIsOpenRoleChanger((prev) => (prev === idChanger ? "" : idChanger)),
+    []
+  );
 
   return (
     <tbody className={s.body}>
       {paginatedUsers.map((user, index) => (
         <tr className={s.body_row} key={index}>
           <td className={s.body_row_user}>
-            <img
-              crossOrigin="anonymous"
-              className={s.body_row_user_img}
-              src={user.photo ? user.photo : "/img/user.svg"}
-              alt={user.name}
-            />
             <div className={s.body_row_user_group}>
               <p className={s.body_row_user_group_name}>
                 {user.name} {user.last_name}
@@ -89,11 +90,8 @@ const BodyUsersTable: FC<IBodyUserTable> = ({
           <td className={s.body_row_text} style={{ textAlign: "center" }}>
             {user.lastActive ? formatDateToDDMMYY(user.lastActive) : "No set"}
           </td>
-          <td className={s.body_row_text} style={{textAlign:"center"}}>
+          <td className={s.body_row_text} style={{ textAlign: "center" }}>
             <span className={s.body_row_text_gray}>{user.amountOfOrders}$</span>
-            {/* <button className={s.body_row_button}>
-              <MenuIcon width="24" height="24" color="#111111" type="close" />
-            </button> */}
           </td>
         </tr>
       ))}
