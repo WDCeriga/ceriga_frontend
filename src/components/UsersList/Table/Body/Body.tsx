@@ -1,6 +1,6 @@
 import { FC, useEffect, useState, useMemo, useCallback } from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@redux/store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@redux/store";
 import { getUsersList } from "@redux/slices/dashboard";
 import { formatDateToDDMMYY } from "@services/dataConverter";
 import { IUserDashboard } from "@interfaces/bll/dashboard.interface";
@@ -23,32 +23,20 @@ const BodyUsersTable: FC<IBodyUserTable> = ({
 }) => {
   const [isOpenRoleChanger, setIsOpenRoleChanger] = useState<string>("");
   const dispatch = useDispatch<AppDispatch>();
+  const isFetchingUsers = useSelector((state: RootState) => state.dashboard.isLoading);
 
   useEffect(() => {
-    if (users.length === 0) {
+    if (!isFetchingUsers && users.length === 0) {
       dispatch(getUsersList());
     }
-  }, [dispatch, users]);
+  }, [dispatch, users, isFetchingUsers]);
 
-  const sortedUsers = useMemo(() => {
-    const roleOrder: Record<string, number> = {
-      superAdmin: 1,
-      admin: 2,
-      user: 3,
-    };
-
-    return users.slice().sort((a, b) => {
-      return (
-        roleOrder[a.role as keyof typeof roleOrder] -
-        roleOrder[b.role as keyof typeof roleOrder]
-      );
-    });
-  }, [users]);
-
+  // Pagination without sorting
   const paginatedUsers = useMemo(() => {
+    if (users.length === 0) return [];
     const startIndex = (currentPage - 1) * itemsPerPage;
-    return sortedUsers.slice(startIndex, startIndex + itemsPerPage);
-  }, [currentPage, itemsPerPage, sortedUsers]);
+    return users.slice(startIndex, startIndex + itemsPerPage);
+  }, [currentPage, itemsPerPage, users]);
 
   const handleToggleRoleChanger = useCallback(
     (idChanger: string) =>
@@ -58,8 +46,8 @@ const BodyUsersTable: FC<IBodyUserTable> = ({
 
   return (
     <tbody className={s.body}>
-      {paginatedUsers.map((user, index) => (
-        <tr className={s.body_row} key={index}>
+      {paginatedUsers.map((user) => (
+        <tr className={s.body_row} key={user._id}>
           <td className={s.body_row_user}>
             <div className={s.body_row_user_group}>
               <p className={s.body_row_user_group_name}>
@@ -82,11 +70,9 @@ const BodyUsersTable: FC<IBodyUserTable> = ({
                 handleChangeOpen={handleToggleRoleChanger}
                 handleToggleModal={() => handleToggleModal(user._id)}
               />
-            ) : (
-              ""
-            )}
+            ) : null}
           </td>
-          <td className={`${s.body_row_text} ${s.email}`}>{user.email}</td>
+          <td className={s.body_row_text}>{user.email}</td>
           <td className={s.body_row_text} style={{ textAlign: "center" }}>
             {user.lastActive ? formatDateToDDMMYY(user.lastActive) : "No set"}
           </td>
