@@ -1,9 +1,35 @@
 import { IOrderState } from "@interfaces/bll/order.interface";
 import { IParamPreviewOrder } from "@interfaces/order/paramsPreview.interface";
 
+const fetchAllStorageFiles = async () => {
+  let allItems: any[] = [];
+  let nextPageToken: string | undefined = undefined;
+
+  try {
+    do {
+      const response = await fetch(
+        `https://storage.googleapis.com/storage/v1/b/ceriga-storage-bucket/o?${nextPageToken ? `pageToken=${nextPageToken}&` : ''}`
+      );
+      const data = await response.json();
+
+      if (data.items) {
+        allItems = [...allItems, ...data.items];
+      }
+
+      nextPageToken = data.nextPageToken;
+    } while (nextPageToken);
+
+    return allItems;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return [];
+  }
+};
+
 export const mapOrderStateToParams = async (state: IOrderState) => {
   const currentId = state.draftId ?? state._id;
   console.log(currentId);
+
   let links = {
     design: '',
     neck: '',
@@ -12,15 +38,12 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
   };
 
   try {
-    const response = await fetch('https://storage.googleapis.com/storage/v1/b/ceriga-storage-bucket/o/');
-    const data = await response.json();
+    const items = await fetchAllStorageFiles();
 
-    if (Array.isArray(data.items)) {
-      const names = data.items.map((item) => item.name);
-
+    if (items.length > 0) {
+      const names = items.map((item) => item.name);
       console.log("Names:", names);
 
-      // Helper function to find a valid file link
       const findValidLink = (folder: string) => {
         const folderContent = names.filter(name => name.startsWith(`${currentId}/${folder}/`) && name !== `${currentId}/${folder}/`);
         return folderContent.length > 0 ? folderContent[0] : '';
@@ -33,7 +56,6 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
 
       console.log("Links:", links);
 
-      // Update the links with the full URL
       Object.keys(links).forEach(key => {
         if (links[key]) {
           links[key] = `https://storage.googleapis.com/ceriga-storage-bucket/${links[key]}`;
@@ -44,12 +66,11 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
     }
 
     console.log("Updated Links:", links);
-
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error processing data:', error);
   }
 
-  const data: IParamPreviewOrder[] = [
+  return [
     {
       title: "Fabrics",
       paramsType: "list",
@@ -141,6 +162,4 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
       })),
     },
   ];
-  return data;
 };
-
