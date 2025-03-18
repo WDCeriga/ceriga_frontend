@@ -4,7 +4,10 @@ import { orderStatusType } from "@interfaces/orders/orders.interface";
 export type manufacturerType =
   | "Portugal  manufacturer"
   | "Türkiye manufacturer"
-  | "Spain manufacturer";
+  | "Spain manufacturer"
+  | "Samuel O Assigned"
+  | "Richy J Assigned"
+  | "Sam E Assigned";
 
 export type sortType = "Oldest First" | "Newest First"
 
