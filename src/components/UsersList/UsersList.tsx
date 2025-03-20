@@ -16,7 +16,7 @@ const UsersList: FC = () => {
   );
   const { filterByRole } = useSelector((state: RootState) => state.dashboard);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 50;
+  const itemsPerPage = 10;
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
