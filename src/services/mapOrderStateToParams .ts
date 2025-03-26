@@ -129,6 +129,7 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
           titleStyle: "bold",
           link: links.design,
         },
+        { title: "Printing", value: state.printing || "" },
         { title: "Extra Details", value: state.stitching.description || "" },
         { title: "Stitching", value: state.stitching.type || "" },
         { title: "Custom Stitching", value: "" },
