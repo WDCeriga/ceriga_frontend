@@ -24,7 +24,7 @@ const initialState: IAdminOrdersState = {
   list: null,
   invoiceOrder: null,
   totalCount: null,
-  sortType: "Newest First",
+  sortType: "Oldest First",
 };
 
 export const getAllOrders = createAsyncThunk<
