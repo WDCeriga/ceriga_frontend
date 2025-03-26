@@ -69,7 +69,9 @@ const PreviewForAdmin: FC<IPreviewForAdmin> = ({ id }) => {
       </div>
       <div className={s.preview_right}>
         <TitlePreview product={order.productType || ""} />
-        <h4 className={s.preview_right_fitSize}>Fit Size</h4>
+        <h4 className={s.preview_right_fitSize}>
+    Fit Size: <span>{order.tableType || "N/A"}</span>
+  </h4>
         <SizeTable isPreview={true} sizes={order.tableSize} />
         <ul className={s.preview_right_list}>
           {orderData &&
