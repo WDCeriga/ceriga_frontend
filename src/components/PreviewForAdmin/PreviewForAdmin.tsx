@@ -28,6 +28,7 @@ const PreviewForAdmin: FC<IPreviewForAdmin> = ({ id }) => {
       try {
         const data = await getOrderItemApi(id);
         setOrder(data);
+        console.log(data);
         const mappedData = await mapOrderStateToParams(data);
         setOrderData(mappedData);
       } catch (err) {
