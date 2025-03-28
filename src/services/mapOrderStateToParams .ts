@@ -160,15 +160,16 @@ export const mapOrderStateToParams = async (state: IOrderState) => {
       subparameters: state.quantity.list.map((item) => ({
         title: item.name,
         value: item.value.toString(),
-      })),
-    },title: "Total Quantity",
-  paramsType: "list",
-  subparameters: [
-    { title: "Total", value: state.quantity.list.reduce((sum, item) => sum + item.value, 0).toString() || "N/A"},
+      })), 
+      {
+        title: "Total Quantity",
+        paramsType: "list",
+        subparameters: [
+        { title: "Total", value: state.quantity.list.reduce((sum, item) => sum + item.value, 0).toString() || "N/A"},
   ],
-   {
-  
 }
+    },
+  
 
   ];
 };
